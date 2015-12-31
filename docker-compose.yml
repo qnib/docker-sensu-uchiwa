@@ -44,6 +44,8 @@ rabbitmq:
     container_name: rabbitmq
     links:
      - consul:consul
+    environment:
+     - RABBITMQ_VHOSTS=sensu:sensu:pass
     privileged: true
 
 sensu:
