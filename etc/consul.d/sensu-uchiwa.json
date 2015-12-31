@@ -1,0 +1,15 @@
+{
+  "services": [
+    {
+      "name": "sensu-uchiwa",
+      "tags": ["http"],
+      "port": 3000,
+      "checks": [
+        {
+          "script": "nmap 127.0.0.1 -PN -p 3000 | grep open",
+          "interval": "5s"
+        }
+      ]
+    }
+  ]
+}
