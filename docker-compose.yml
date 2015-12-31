@@ -55,6 +55,10 @@ sensu:
     ports: 
      - "4567:4567"
     dns: 127.0.0.1
+    environment:
+     - SENSU_SERVER=true
+     - SENSU_API=true
+     - SENSU_CLIENT=true
     links:
      - consul:consul
     privileged: true
